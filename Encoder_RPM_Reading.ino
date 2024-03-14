@@ -19,7 +19,7 @@ void loop() {
 }
 
 void calculateRPM() {
-  int32_t encoderValue = myEnc.read();
+  int32_t encoderValue = myEnc.read(); // Reads value form the encoder
   int32_t deltaEncoder = encoderValue - lastEncoderValue;
   lastEncoderValue = encoderValue;
   rpm = (float(deltaEncoder) / CPR) * (60.0 / 0.1); 
